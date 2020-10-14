@@ -347,6 +347,13 @@ body {
   padding-bottom: 60px;
   background-color: var(--dark-bg-color);
 }
+.footer .container {
+  display: flex;
+}
+.footer-address {
+  width: 270px;
+  margin-right: 30px;
+}
 .footer .logo {
   display: block;
   padding-bottom: 20px;
@@ -373,6 +380,41 @@ body {
 .address-item:not(:last-child) {
   margin-bottom: 9px;
 }
+.footer-social {
+  padding-top: 12px;
+}
+.footer-social-text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-bg-color);
+}
+.footer-social-links {
+  display: flex;
+}
+.footer-social-links-item:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-social-links-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-social-links-link:hover,
+.footer-social-links-link:focus {
+  background-color: var(--accent-color);
+}
+.footer-social-links-icon {
+  fill: var(--primary-bg-color);
+}
+
 /* Портфолио */
 
 .portfolio button {
@@ -409,6 +451,10 @@ body {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
+}
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-item .link {
   display: block;
