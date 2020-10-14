@@ -8,7 +8,12 @@
 /* цвет акцента #2196F3 */
 /* цвет бордера #ECECEC */
 /* цвет рамки #EEEEEE */
-
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
 :root {
   --primary-bg-color: #ffffff;
   --secondary-bg-color: #f5f4fa;
@@ -95,11 +100,18 @@ body {
 .contacts {
   display: flex;
 }
+
+.contacts-icon {
+  display: block;
+  fill: currentColor;
+  margin-right: 10px;
+}
 .contacts .item:not(:last-child) {
   margin-right: 50px;
 }
 .contacts .link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -112,6 +124,7 @@ body {
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--accent-color);
+  fill: currentColor;
 }
 /* Герой */
 .hero {
@@ -125,7 +138,7 @@ body {
   text-align: center;
 }
 .hero-container {
-  width: 696px;
+  max-width: 696px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -181,6 +194,15 @@ body {
 .advantages-item {
   width: calc((100% - 90px) / 4);
 }
+.advantages-icon-container {
+  display: flex;
+  height: 120px;
+  background-color: var(--secondary-bg-color);
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
 .advantages-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -210,6 +232,9 @@ body {
 .occupation .list {
   display: flex;
 }
+.occupation-item {
+  width: calc((100% - 60px) / 3);
+}
 .occupation-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -228,6 +253,7 @@ body {
 }
 .team-item {
   padding-bottom: 30px;
+  width: calc((100% - 90px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -248,13 +274,41 @@ body {
 }
 .team-text {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+}
+.team-social-links {
+  display: flex;
+  justify-content: center;
+}
+.team-social-links-item {
+  color: #afb1b8;
+}
+.team-social-links-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+}
+.team-social-links-link:hover,
+.team-social-links-link:focus {
+  color: var(--primary-bg-color);
+
+  background-color: var(--accent-color);
+}
+.team-social-links-item:not(:last-child) {
+  margin-right: 10px;
+}
+.team-social-links-icon {
+  fill: currentColor;
 }
 /* Подвал */
 
@@ -322,6 +376,7 @@ body {
   flex-wrap: wrap;
 }
 .portfolio-item {
+  width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
